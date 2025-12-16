@@ -12,23 +12,23 @@ export const DARES: GameContent[] = [
   { id: 12, text: "單身狗喝一杯", engText: "Singles drink one cup", type: 'DARE', category: "drinking" },
   { id: 13, text: "非單身的人喝一杯", engText: "Those in a relationship drink one cup", type: 'DARE', category: "drinking" },
   { id: 14, text: "穿黑衣服的人喝", engText: "Wearing black? Drink!", type: 'DARE', category: "drinking" },
-  { id: 15, text: "指定一個人陪你喝完這杯 (連坐)", engText: "Pick a mate to finish this cup with you", type: 'DARE', category: "drinking" },
+  { id: 15, text: "指定右手邊第二位陪你喝完這杯", engText: "Person 2 seats to your right finishes this with you", type: 'DARE', category: "drinking" },
   { id: 16, text: "大喊「我是酒鬼」三聲，然後喝", engText: "Shout 'I am a drunkard' 3 times, then drink", type: 'DARE', category: "drinking" },
   { id: 17, text: "不用手把桌上一杯酒喝光", engText: "Drink a glass without hands", type: 'DARE', category: "drinking" },
   { id: 18, text: "自罰一杯", engText: "Punish yourself: Drink a full cup", type: 'DARE', category: "drinking" },
   { id: 19, text: "大家投票選出酒量最差的喝", engText: "Vote for worst tolerance, they drink", type: 'DARE', category: "drinking" },
 
   // --- 2. King's Orders (Simple Assignments) ---
-  { id: 301, text: "你是國王！指定一個人喝完這杯", engText: "King! Order someone to finish this glass", type: 'DARE', category: "drinking" },
+  { id: 301, text: "你是國王！指定右手邊第一位喝完這杯", engText: "King! Right person finishes this glass", type: 'DARE', category: "drinking" },
   { id: 302, text: "你是國王！指定全場除了你以外的人各喝一口", engText: "King! Everyone drinks a sip except you", type: 'DARE', category: "drinking" },
-  { id: 303, text: "你是國王！指定兩個人猜拳，輸的喝兩杯", engText: "King! Pick 2 people to RPS, loser drinks 2 cups", type: 'DARE', category: "drinking" },
+  { id: 303, text: "你是國王！指定左一和右一猜拳，輸的喝兩杯", engText: "King! Left & Right neighbors RPS, loser drinks 2 cups", type: 'DARE', category: "drinking" },
   { id: 304, text: "你是國王！指定現場年紀最小的人喝一杯", engText: "King! Youngest person drinks a cup", type: 'DARE', category: "drinking" },
-  { id: 305, text: "你是國王！指定現場兩個人喝交杯酒", engText: "King! Order 2 people to drink cross-armed", type: 'DARE', category: "drinking" },
-  { id: 306, text: "你是國王！指定一個人代替你喝這輪的酒", engText: "King! Designate someone to drink for you", type: 'DARE', category: "drinking" },
-  { id: 307, text: "你是國王！指定三個人一起乾杯", engText: "King! Pick 3 people to cheers and drink", type: 'DARE', category: "drinking" },
-  { id: 308, text: "你是國王！指定一個異性餵你喝", engText: "King! Pick opposite sex to feed you a drink", type: 'DARE', category: "drinking" },
+  { id: 305, text: "你是國王！指定左邊兩位喝交杯酒", engText: "King! 2 people to your left drink cross-armed", type: 'DARE', category: "drinking" },
+  { id: 306, text: "你是國王！指定正對面的人代替你喝這輪的酒", engText: "King! Opposite person drinks for you", type: 'DARE', category: "drinking" },
+  { id: 307, text: "你是國王！指定最近的三個人一起乾杯", engText: "King! Pick 3 nearest people to cheers and drink", type: 'DARE', category: "drinking" },
+  { id: 308, text: "你是國王！指定右手邊第一位異性餵你喝", engText: "King! 1st opposite sex on right feeds you a drink", type: 'DARE', category: "drinking" },
 
-  // --- 3. Funny & Crazy Dares (New & Existing) ---
+  // --- 3. Funny & Crazy Dares (Targeted) ---
   { id: 50, text: "模仿一種動物叫聲，直到有人笑", engText: "Imitate an animal until someone laughs", type: 'DARE', category: "mild" },
   { id: 51, text: "用屁股寫字給大家猜", engText: "Write with butt", type: 'DARE', category: "mild" },
   { id: 52, text: "講一個笑話，沒人笑就喝", engText: "Tell a joke, drink if no laugh", type: 'DARE', category: "mild" },
@@ -40,12 +40,12 @@ export const DARES: GameContent[] = [
   { id: 58, text: "只能用氣音說話一輪", engText: "Whisper only", type: 'DARE', category: "mild" },
   { id: 59, text: "這局pass，沒事", engText: "Pass", type: 'DARE', category: "mild" },
   
-  // New Humorous/Crazy Dares (Replaces Drinking Games)
+  // New Humorous/Crazy Dares
   { id: 601, text: "學嬰兒哭聲，持續10秒", engText: "Cry like a baby for 10s", type: 'DARE', category: "wild" },
   { id: 602, text: "假裝自己在騎馬，繞著桌子跑一圈", engText: "Ride a fake horse around table", type: 'DARE', category: "wild" },
-  { id: 603, text: "讓在場所有人選一張你手機裡最醜的照片發限動", engText: "Post ugliest photo on IG story", type: 'DARE', category: "wild" },
-  { id: 604, text: "對著空氣深情告白30秒", engText: "Confess love to air 30s", type: 'DARE', category: "wild" },
-  { id: 605, text: "模仿在場其中一個人的動作/說話方式", engText: "Imitate someone here", type: 'DARE', category: "mild" },
+  { id: 603, text: "讓左邊第二位選一張你手機裡最醜的照片發限動", engText: "Left #2 picks ugliest photo for IG story", type: 'DARE', category: "wild" },
+  { id: 604, text: "對著正對面的人深情告白30秒", engText: "Confess love to opposite person 30s", type: 'DARE', category: "wild" },
+  { id: 605, text: "模仿右手邊的人的動作/說話方式一回合", engText: "Imitate right neighbor for 1 round", type: 'DARE', category: "mild" },
   { id: 606, text: "用RAP的方式自我介紹", engText: "Self intro in RAP", type: 'DARE', category: "wild" },
   { id: 607, text: "聞自己的腳，然後說「真香」", engText: "Smell own foot and say Yummy", type: 'DARE', category: "wild" },
   { id: 608, text: "假裝中彈身亡，演得越像越好", engText: "Act like dying from gunshot", type: 'DARE', category: "mild" },
@@ -56,58 +56,105 @@ export const DARES: GameContent[] = [
   { id: 613, text: "擺一個時尚雜誌名模POSE堅持1分鐘", engText: "Vogue pose for 1 min", type: 'DARE', category: "mild" },
   { id: 614, text: "把鞋子脫下來當電話打給前任(假裝)", engText: "Use shoe as phone call ex", type: 'DARE', category: "wild" },
   { id: 615, text: "做出「便秘」的表情自拍一張", engText: "Constipation face selfie", type: 'DARE', category: "wild" },
-  { id: 616, text: "向陌生人推薦這個 APP，並強迫他現場玩一次", engText: "Recommend this APP to a stranger & make them play once", type: 'DARE', category: "wild" },
+  { id: 616, text: "向左邊的陌生人推薦這個APP，並強迫他現場玩一次", engText: "Recommend this APP to a stranger on left", type: 'DARE', category: "wild" },
 
-  // King's Wild Actions
-  { id: 401, text: "你是國王！指定一個人當你的僕人，幫你拿酒/按摩一回合", engText: "King! Assign a servant for 1 round", type: 'DARE', category: "mild" },
-  { id: 402, text: "你是國王！指定兩個人進行深情對視比賽，先笑的喝", engText: "King! 2 people staring contest, loser drinks", type: 'DARE', category: "wild" },
-  { id: 403, text: "你是國王！指定一個人模仿猴子，直到下一輪", engText: "King! Assign someone to act like a monkey", type: 'DARE', category: "mild" },
-  { id: 404, text: "你是國王！指定一個人去搭訕路人/隔壁桌", engText: "King! Assign someone to hit on a stranger", type: 'DARE', category: "wild" },
-  { id: 405, text: "你是國王！指定兩個人十指緊扣一回合", engText: "King! Assign 2 people to hold hands for 1 round", type: 'DARE', category: "wild" },
-  { id: 406, text: "你是國王！指定三個人一起做深蹲5下", engText: "King! Assign 3 people to do 5 squats", type: 'DARE', category: "wild" },
-  { id: 407, text: "你是國王！指定一個異性坐在你旁邊(換位置)", engText: "King! Make an opposite sex sit next to you", type: 'DARE', category: "wild" },
-  { id: 408, text: "你是國王！指定兩個人互換外套穿", engText: "King! Assign 2 people to swap jackets", type: 'DARE', category: "wild" },
-  { id: 409, text: "你是國王！指定一個人對著大家撒嬌", engText: "King! Assign someone to act cute", type: 'DARE', category: "wild" },
+  // King's Wild Actions (Targeted)
+  { id: 401, text: "你是國王！指定左手邊第一位當你的僕人，幫你拿酒/按摩一回合", engText: "King! Left #1 is your servant for 1 round", type: 'DARE', category: "mild" },
+  { id: 402, text: "你是國王！指定正對面與他右邊的人進行深情對視比賽，先笑的喝", engText: "King! Opposite & their neighbor staring contest", type: 'DARE', category: "wild" },
+  { id: 403, text: "你是國王！指定右手邊第二位模仿猴子，直到下一輪", engText: "King! Right #2 acts like a monkey", type: 'DARE', category: "mild" },
+  { id: 404, text: "你是國王！指定左邊第一位去搭訕路人/隔壁桌", engText: "King! Left #1 hits on a stranger", type: 'DARE', category: "wild" },
+  { id: 405, text: "你是國王！指定現場兩位異性十指緊扣一回合", engText: "King! 2 opposite sex hold hands for 1 round", type: 'DARE', category: "wild" },
+  { id: 406, text: "你是國王！指定和你間隔最遠的三個人一起做深蹲5下", engText: "King! 3 furthest people do 5 squats", type: 'DARE', category: "wild" },
+  { id: 407, text: "你是國王！指定右手邊第一位異性坐在你旁邊(換位置)一回合", engText: "King! Right #1 opposite sex sits next to you 1 round", type: 'DARE', category: "wild" },
+  { id: 408, text: "你是國王！指定左一和右一互換外套穿", engText: "King! Left #1 & Right #1 swap jackets", type: 'DARE', category: "wild" },
+  { id: 409, text: "你是國王！指定正對面的人對著大家撒嬌", engText: "King! Opposite person acts cute", type: 'DARE', category: "wild" },
   { id: 410, text: "你是國王！指定兩個人合唱一首歌", engText: "King! Assign 2 people to sing a duet", type: 'DARE', category: "wild" },
-  { id: 411, text: "你是國王！指定一個人被你畫臉", engText: "King! Draw on someone's face", type: 'DARE', category: "wild" },
-  { id: 412, text: "你是國王！指定三個人疊在一起拍照", engText: "King! 3 people stack for a photo", type: 'DARE', category: "wild" },
-  { id: 413, text: "你是國王！指定一個人和你玩剪刀石頭布，輸的脫一件", engText: "King! RPS with someone, loser removes item", type: 'DARE', category: "wild" },
-  { id: 414, text: "你是國王！指定一個人做伏地挺身，上面坐另一個人", engText: "King! Pushups with someone sitting on back", type: 'DARE', category: "wild" },
+  { id: 411, text: "你是國王！指定左邊第一位被你畫臉", engText: "King! Draw on Left #1's face", type: 'DARE', category: "wild" },
+  { id: 412, text: "你是國王！指定右手邊三個人疊在一起拍照", engText: "King! 3 people on right stack for a photo", type: 'DARE', category: "wild" },
+  { id: 413, text: "你是國王！指定正對面的人和你玩剪刀石頭布，輸的脫一件", engText: "King! RPS with opposite, loser removes item", type: 'DARE', category: "wild" },
+  { id: 414, text: "你是國王！指定左邊第一位做伏地挺身，上面坐右邊第一位", engText: "King! Left #1 pushups with Right #1 sitting on back", type: 'DARE', category: "wild" },
 
-  // Wild Actions
-  { id: 60, text: "選一個異性深情對視10秒", engText: "Stare at opposite sex 10s", type: 'DARE', category: "wild" },
-  { id: 61, text: "跳一段性感的舞20秒", engText: "Sexy dance 20s", type: 'DARE', category: "wild" },
-  { id: 62, text: "向在場一位異性告白（假裝的）", engText: "Fake confess love", type: 'DARE', category: "wild" },
+  // Wild Actions (Specific Targets & Durations)
+  { id: 60, text: "跟右手邊第一位異性深情對視10秒", engText: "Stare at right opposite sex 10s", type: 'DARE', category: "wild" },
+  { id: 6011, text: "跟左手邊第一位異性深情對視20秒", engText: "Stare at left opposite sex 20s", type: 'DARE', category: "wild" },
+  
+  { id: 61, text: "對著正對面的人跳一段性感的舞20秒", engText: "Sexy dance for opposite person 20s", type: 'DARE', category: "wild" },
+  
+  { id: 62, text: "向左手邊第一位異性告白（假裝的）", engText: "Fake confess love to left opposite sex", type: 'DARE', category: "wild" },
+  
   { id: 63, text: "聞右邊的人的腋下", engText: "Smell right person's armpit", type: 'DARE', category: "wild" },
+  { id: 6301, text: "聞左邊的人的腋下", engText: "Smell left person's armpit", type: 'DARE', category: "wild" },
+  
   { id: 64, text: "隨機打給通訊錄一個人說我愛你", engText: "Call contact say I love you", type: 'DARE', category: "wild" },
-  { id: 65, text: "用嫵媚的聲音說：我要", engText: "Seductively say 'I want it'", type: 'DARE', category: "wild" },
-  { id: 66, text: "讓大家檢查你的包包/口袋", engText: "Bag/Pocket check", type: 'DARE', category: "wild" },
+  
+  { id: 65, text: "對著右邊的人用嫵媚的聲音說：我要", engText: "Seductively say 'I want it' to right person", type: 'DARE', category: "wild" },
+  
+  { id: 66, text: "讓右手邊第一位檢查你的包包/口袋", engText: "Right #1 checks your bag/pocket", type: 'DARE', category: "wild" },
+  
   { id: 67, text: "對這杯酒深情告白然後喝掉", engText: "Confess to drink then drink", type: 'DARE', category: "wild" },
+  
   { id: 68, text: "用舌頭舔一下杯緣一圈", engText: "Lick glass rim", type: 'DARE', category: "wild" },
+  
   { id: 69, text: "說出初吻的年齡", engText: "Age of first kiss", type: 'DARE', category: "wild" },
-  { id: 70, text: "發出性感的呻吟聲", engText: "Sexy moan", type: 'DARE', category: "wild" },
+  
+  { id: 70, text: "對著左邊的人發出性感的呻吟聲", engText: "Sexy moan to left person", type: 'DARE', category: "wild" },
+  
   { id: 71, text: "說出在場最有好感的人", engText: "Who do you like here", type: 'DARE', category: "wild" },
+  
   { id: 72, text: "脫掉身上的一件配件或外衣", engText: "Remove item", type: 'DARE', category: "wild" },
-  { id: 73, text: "用公主抱抱起現場一位異性深蹲三下", engText: "Bridal carry squat", type: 'DARE', category: "wild" },
+  
+  { id: 73, text: "用公主抱抱起右手邊第一位異性深蹲三下", engText: "Bridal carry right opposite sex & squat 3 times", type: 'DARE', category: "wild" },
+  { id: 7301, text: "用公主抱抱起左手邊第一位異性深蹲一下", engText: "Bridal carry left opposite sex & squat once", type: 'DARE', category: "wild" },
+  
   { id: 74, text: "讓左邊的人聞你的頭髮", engText: "Left person smell hair", type: 'DARE', category: "wild" },
-  { id: 75, text: "和右邊的人臉貼臉堅持10秒", engText: "Cheek to cheek 10s", type: 'DARE', category: "wild" },
-  { id: 76, text: "被左邊的人壁咚10秒", engText: "Kabedon 10s", type: 'DARE', category: "wild" },
-  { id: 77, text: "讓右邊的人幫你塗護唇膏(用手指)", engText: "Lip balm by finger", type: 'DARE', category: "wild" },
-  { id: 78, text: "從後面環抱左邊的人10秒", engText: "Back hug 10s", type: 'DARE', category: "wild" },
-  { id: 79, text: "親吻右邊的人的手背", engText: "Kiss hand", type: 'DARE', category: "wild" },
+  
+  { id: 75, text: "和右邊的人臉貼臉堅持10秒", engText: "Cheek to cheek with right person 10s", type: 'DARE', category: "wild" },
+  { id: 7501, text: "和左邊的人臉貼臉堅持10秒", engText: "Cheek to cheek with left person 10s", type: 'DARE', category: "wild" },
+  
+  { id: 76, text: "被左邊的人壁咚10秒", engText: "Kabedon by left person 10s", type: 'DARE', category: "wild" },
+  { id: 7601, text: "被右邊的人壁咚10秒", engText: "Kabedon by right person 10s", type: 'DARE', category: "wild" },
+  
+  { id: 77, text: "讓右邊的人幫你塗護唇膏(用手指)", engText: "Right person puts lip balm on you (finger)", type: 'DARE', category: "wild" },
+  
+  { id: 78, text: "從後面環抱左邊的人10秒", engText: "Back hug left person 10s", type: 'DARE', category: "wild" },
+  { id: 7801, text: "從後面環抱右邊的人10秒", engText: "Back hug right person 10s", type: 'DARE', category: "wild" },
+  
+  { id: 79, text: "親吻右邊的人的手背", engText: "Kiss right person's hand", type: 'DARE', category: "wild" },
 
-  // --- 4. 18+ Explicit (IDs 200+, 500+) ---
-  { id: 201, text: "嘴對嘴傳冰塊給下一位", engText: "Pass ice mouth-to-mouth", type: 'DARE', category: "r18" },
-  { id: 202, text: "用嘴巴解開一個人的扣子", engText: "Mouth unbutton", type: 'DARE', category: "r18" },
-  { id: 203, text: "選一個人坐在他大腿上一分鐘", engText: "Sit on lap 1 min", type: 'DARE', category: "r18" },
-  { id: 204, text: "對右邊的人耳朵吹氣", engText: "Blow in ear", type: 'DARE', category: "r18" },
-  { id: 205, text: "用嘴含冰塊在左邊的人脖子上滑動", engText: "Ice on neck", type: 'DARE', category: "r18" },
-  { id: 206, text: "讓異性摸你的腹肌/鎖骨", engText: "Touch abs/collarbone", type: 'DARE', category: "r18" },
-  { id: 207, text: "讓手伸進你衣服裡摸肚子", engText: "Hand inside shirt", type: 'DARE', category: "r18" },
-  { id: 208, text: "輕咬左邊的人的耳朵", engText: "Bite ear", type: 'DARE', category: "r18" },
-  { id: 209, text: "用身體磨蹭異性十秒", engText: "Grind body 10s", type: 'DARE', category: "r18" },
-  { id: 210, text: "在大腿內側寫字", engText: "Write on inner thigh", type: 'DARE', category: "r18" },
-  { id: 211, text: "互換上衣", engText: "Swap shirts", type: 'DARE', category: "r18" }
+  // --- 4. 18+ Explicit (Targeted & Duration Variations) ---
+  
+  { id: 201, text: "嘴對嘴傳冰塊給右手邊第一位", engText: "Pass ice mouth-to-mouth to Right #1", type: 'DARE', category: "r18" },
+  { id: 2011, text: "嘴對嘴傳冰塊給左手邊第一位", engText: "Pass ice mouth-to-mouth to Left #1", type: 'DARE', category: "r18" },
+
+  { id: 202, text: "用嘴巴解開左手邊第一位異性的上衣扣子", engText: "Mouth unbutton Left #1 opposite sex's shirt", type: 'DARE', category: "r18" },
+  { id: 2021, text: "用嘴巴解開右手邊第一位異性的褲頭/裙頭扣子", engText: "Mouth unbutton Right #1 opposite sex's pants", type: 'DARE', category: "r18" },
+
+  { id: 2030, text: "坐在右手邊第一位異性的大腿上，持續一回合", engText: "Sit on Right #1 opposite sex's lap for 1 round", type: 'DARE', category: "r18" },
+  { id: 2031, text: "坐在左手邊第一位異性的大腿上，持續3分鐘", engText: "Sit on Left #1 opposite sex's lap for 3 mins", type: 'DARE', category: "r18" },
+  { id: 2032, text: "坐在右手邊第二位異性的大腿上，持續一回合", engText: "Sit on Right #2 opposite sex's lap for 1 round", type: 'DARE', category: "r18" },
+
+  { id: 204, text: "對右邊的人耳朵吹氣", engText: "Blow in right person's ear", type: 'DARE', category: "r18" },
+  { id: 2041, text: "對左邊的人耳朵吹氣", engText: "Blow in left person's ear", type: 'DARE', category: "r18" },
+
+  { id: 205, text: "用嘴含冰塊在左邊的人脖子上滑動", engText: "Ice on left person's neck", type: 'DARE', category: "r18" },
+  { id: 2051, text: "用嘴含冰塊在右邊的人脖子上滑動", engText: "Ice on right person's neck", type: 'DARE', category: "r18" },
+
+  { id: 206, text: "讓左邊第一位異性摸你的腹肌/鎖骨", engText: "Left #1 opposite sex touches abs/collarbone", type: 'DARE', category: "r18" },
+  { id: 2061, text: "讓右邊第一位異性摸你的大腿/腰", engText: "Right #1 opposite sex touches thigh/waist", type: 'DARE', category: "r18" },
+
+  { id: 207, text: "讓右邊的人手伸進你衣服裡摸肚子", engText: "Right person hand inside shirt touching belly", type: 'DARE', category: "r18" },
+
+  { id: 208, text: "輕咬左邊的人的耳朵", engText: "Bite left person's ear", type: 'DARE', category: "r18" },
+  { id: 2081, text: "輕咬右邊的人的耳朵", engText: "Bite right person's ear", type: 'DARE', category: "r18" },
+
+  { id: 209, text: "用身體磨蹭左手邊異性十秒", engText: "Grind body on left opposite sex 10s", type: 'DARE', category: "r18" },
+  { id: 2091, text: "用身體磨蹭右手邊異性十秒", engText: "Grind body on right opposite sex 10s", type: 'DARE', category: "r18" },
+
+  { id: 210, text: "在右邊的人大腿內側寫字", engText: "Write on right person's inner thigh", type: 'DARE', category: "r18" },
+
+  { id: 2110, text: "跟右手邊第一位異性互換上衣，持續一回合", engText: "Swap shirts with Right #1 opposite sex for 1 round", type: 'DARE', category: "r18" },
+  { id: 2111, text: "跟左手邊第一位異性互換上衣，持續10分鐘", engText: "Swap shirts with Left #1 opposite sex for 10 mins", type: 'DARE', category: "r18" },
+  { id: 2112, text: "跟正對面的異性互換上衣，直到遊戲結束", engText: "Swap shirts with opposite person until game ends", type: 'DARE', category: "r18" }
 ];
 
 export const TRUTHS: GameContent[] = [
