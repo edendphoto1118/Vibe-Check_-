@@ -1,265 +1,230 @@
 import { GameRule, Cocktail, GameContent } from './types';
 
 export const DARES: GameContent[] = [
-  // --- 1. Basic Drinking Punishments (Direct & Simple) ---
+  // ==========================================
+  // 1. DRINKING (Social & Interactive)
+  // ==========================================
   { id: 1, text: "喝一杯", engText: "Drink one full cup", type: 'DARE', category: "drinking" },
   { id: 2, text: "全場每人喝一口", engText: "Everyone takes a sip", type: 'DARE', category: "drinking" },
-  { id: 3, text: "左邊的人喝半杯", engText: "Person to your left drinks half a cup", type: 'DARE', category: "drinking" },
-  { id: 4, text: "右邊的人喝半杯", engText: "Person to your right drinks half a cup", type: 'DARE', category: "drinking" },
+  { id: 3, text: "找左手邊第一位乾杯，兩人各喝半杯", engText: "Cheers with Left #1, both drink half", type: 'DARE', category: "drinking" },
+  { id: 4, text: "找右手邊第一位乾杯，兩人各喝半杯", engText: "Cheers with Right #1, both drink half", type: 'DARE', category: "drinking" },
+  
   { id: 5, text: "各位紳士喝一杯 (男生喝)", engText: "All gentlemen drink", type: 'DARE', category: "drinking" },
   { id: 6, text: "各位淑女喝一杯 (女生喝)", engText: "All ladies drink", type: 'DARE', category: "drinking" },
-  { id: 7, text: "和正對面的人喝交杯酒", engText: "Cross arms and drink with the person opposite you", type: 'DARE', category: "drinking" },
+  { id: 7, text: "和正對面的人喝交杯酒", engText: "Cross arms and drink with opposite person", type: 'DARE', category: "drinking" },
   { id: 12, text: "單身狗喝一杯", engText: "Singles drink one cup", type: 'DARE', category: "drinking" },
-  { id: 13, text: "非單身的人喝一杯", engText: "Those in a relationship drink one cup", type: 'DARE', category: "drinking" },
-  { id: 14, text: "穿黑衣服的人喝", engText: "Wearing black? Drink!", type: 'DARE', category: "drinking" },
-  { id: 15, text: "指定右手邊第二位陪你喝完這杯", engText: "Person 2 seats to your right finishes this with you", type: 'DARE', category: "drinking" },
-  { id: 1501, text: "指定左手邊第二位陪你喝完這杯", engText: "Person 2 seats to your left finishes this with you", type: 'DARE', category: "drinking" },
+  { id: 13, text: "非單身的人喝一杯", engText: "In a relationship? Drink!", type: 'DARE', category: "drinking" },
+  { id: 15, text: "指定右手邊第二位陪你喝完這杯", engText: "Person 2 seats to right finishes this with you", type: 'DARE', category: "drinking" },
+  { id: 151, text: "指定左手邊第二位陪你喝完這杯", engText: "Person 2 seats to left finishes this with you", type: 'DARE', category: "drinking" },
   { id: 16, text: "大喊「我是酒鬼」三聲，然後喝", engText: "Shout 'I am a drunkard' 3 times, then drink", type: 'DARE', category: "drinking" },
-  { id: 17, text: "不用手把桌上一杯酒喝光", engText: "Drink a glass without hands", type: 'DARE', category: "drinking" },
   { id: 18, text: "自罰一杯", engText: "Punish yourself: Drink a full cup", type: 'DARE', category: "drinking" },
-  { id: 19, text: "大家投票選出酒量最差的喝", engText: "Vote for worst tolerance, they drink", type: 'DARE', category: "drinking" },
+  
+  // [NEW] Chaos Drinking
+  { id: 20, text: "最後一個摸到鼻子的人喝一杯", engText: "Last person to touch their nose drinks", type: 'DARE', category: "drinking" },
+  { id: 21, text: "所有人把手機拿出來，電量最低的人喝", engText: "Lowest phone battery drinks", type: 'DARE', category: "drinking" },
+  { id: 22, text: "拿出一張證件，照片看起來最年輕/最不像的喝", engText: "Person with the most different ID photo drinks", type: 'DARE', category: "drinking" },
+  { id: 23, text: "假裝你在拍鐵達尼號，找右手邊的人從後面抱著你喝", engText: "Titanic pose drinking with Right person", type: 'DARE', category: "drinking" },
+  { id: 24, text: "含著一口酒唱一首歌的副歌，吞下去算輸(再喝一杯)", engText: "Sing chorus with drink in mouth", type: 'DARE', category: "drinking" },
 
-  // --- 2. King's Orders (Simple Assignments) ---
+  // ==========================================
+  // 2. KING'S ORDERS (Power & Control)
+  // ==========================================
   { id: 301, text: "你是國王！指定右手邊第一位喝完這杯", engText: "King! Right person finishes this glass", type: 'DARE', category: "drinking" },
   { id: 302, text: "你是國王！指定全場除了你以外的人各喝一口", engText: "King! Everyone drinks a sip except you", type: 'DARE', category: "drinking" },
-  { id: 303, text: "你是國王！指定左一和右一猜拳，輸的喝兩杯", engText: "King! Left & Right neighbors RPS, loser drinks 2 cups", type: 'DARE', category: "drinking" },
-  { id: 304, text: "你是國王！指定現場年紀最小的人喝一杯", engText: "King! Youngest person drinks a cup", type: 'DARE', category: "drinking" },
-  { id: 305, text: "你是國王！指定左邊兩位喝交杯酒", engText: "King! 2 people to your left drink cross-armed", type: 'DARE', category: "drinking" },
-  { id: 306, text: "你是國王！指定正對面的人代替你喝這輪的酒", engText: "King! Opposite person drinks for you", type: 'DARE', category: "drinking" },
-  { id: 307, text: "你是國王！指定最近的三個人一起乾杯", engText: "King! Pick 3 nearest people to cheers and drink", type: 'DARE', category: "drinking" },
-  { id: 308, text: "你是國王！指定右手邊第一位異性餵你喝", engText: "King! 1st opposite sex on right feeds you a drink", type: 'DARE', category: "drinking" },
+  { id: 305, text: "你是國王！指定左邊第一位與第二位喝交杯酒", engText: "King! Left #1 & Left #2 drink cross-armed", type: 'DARE', category: "drinking" },
+  { id: 308, text: "你是國王！指定右手邊第一位異性餵你喝", engText: "King! 1st opposite sex on right feeds you", type: 'DARE', category: "drinking" },
+  
+  // [NEW] Creative King Commands
+  { id: 309, text: "你是國王！指定正對面的人當你的「扶手」直到下一輪", engText: "King! Opposite person is your armrest", type: 'DARE', category: "wild" },
+  { id: 310, text: "你是國王！給右手邊的人取一個綽號，大家這局都要這樣叫他", engText: "King! Give right person a nickname for this round", type: 'DARE', category: "mild" },
+  { id: 311, text: "你是國王！指定左一和右一深情對唱情歌副歌", engText: "King! Left #1 & Right #1 sing a love song", type: 'DARE', category: "wild" },
+  { id: 312, text: "你是國王！沒收左手邊第一位的手機一回合", engText: "King! Confiscate Left #1's phone for 1 round", type: 'DARE', category: "mild" },
+  { id: 313, text: "你是國王！指定正對面的兩個人互換座位", engText: "King! Swap seats for 2 opposite people", type: 'DARE', category: "mild" },
+  { id: 314, text: "你是國王！指定右手邊第一位異性坐在你旁邊(換位置)一回合", engText: "King! Right #1 opposite sex sits next to you 1 round", type: 'DARE', category: "wild" },
 
-  // --- 3. Funny & Crazy Dares (Targeted & Varied) ---
-  { id: 50, text: "模仿一種動物叫聲，直到有人笑", engText: "Imitate an animal until someone laughs", type: 'DARE', category: "mild" },
-  { id: 51, text: "用屁股寫字給大家猜", engText: "Write with butt", type: 'DARE', category: "mild" },
+  // ==========================================
+  // 3. HUMOR & SOCIAL CHAOS (Meme Vibes)
+  // ==========================================
   { id: 52, text: "講一個笑話，沒人笑就喝", engText: "Tell a joke, drink if no laugh", type: 'DARE', category: "mild" },
-  
-  // Specific Interactions (Replaced vague ones)
-  { id: 5301, text: "和右手邊第一位擁抱10秒", engText: "Hug right person for 10s", type: 'DARE', category: "mild" },
-  { id: 5302, text: "和左手邊第一位擁抱10秒", engText: "Hug left person for 10s", type: 'DARE', category: "mild" },
-  { id: 5303, text: "和正對面的人擁抱，直到下一輪", engText: "Hug opposite person until next round", type: 'DARE', category: "wild" },
-
-  { id: 54, text: "讓左手邊第一位把你的頭髮弄亂", engText: "Let left person mess up your hair", type: 'DARE', category: "mild" },
+  { id: 54, text: "讓左手邊第一位把你的頭髮弄亂，維持一回合", engText: "Left #1 messes up your hair for 1 round", type: 'DARE', category: "mild" },
   { id: 55, text: "跟右手邊的人一起做鬼臉自拍", engText: "Funny face selfie with right person", type: 'DARE', category: "mild" },
-  
-  { id: 5601, text: "讓右邊的人幫你按摩肩膀1分鐘", engText: "Right person massage you 1 min", type: 'DARE', category: "mild" },
-  { id: 5602, text: "讓左邊的人幫你按摩肩膀30秒", engText: "Left person massage you 30s", type: 'DARE', category: "mild" },
-
-  { id: 57, text: "跟牆壁說話10秒", engText: "Talk to wall", type: 'DARE', category: "mild" },
-  { id: 58, text: "只能用氣音說話一輪", engText: "Whisper only", type: 'DARE', category: "mild" },
-  { id: 59, text: "這局pass，沒事", engText: "Pass", type: 'DARE', category: "mild" },
-  
-  // New Humorous/Crazy Dares (Specific)
-  { id: 601, text: "對著右手邊的人學嬰兒哭聲，持續10秒", engText: "Cry like a baby to right person for 10s", type: 'DARE', category: "wild" },
-  { id: 602, text: "假裝自己在騎馬，繞著桌子跑一圈", engText: "Ride a fake horse around table", type: 'DARE', category: "wild" },
-  { id: 603, text: "讓左邊第二位選一張你手機裡最醜的照片發限動", engText: "Left #2 picks ugliest photo for IG story", type: 'DARE', category: "wild" },
-  
-  { id: 6041, text: "對著正對面的人深情告白30秒", engText: "Confess love to opposite person 30s", type: 'DARE', category: "wild" },
-  { id: 6042, text: "對著左手邊第一位異性深情告白1分鐘", engText: "Confess love to left opposite sex 1 min", type: 'DARE', category: "wild" },
-
-  { id: 605, text: "模仿右手邊的人的動作/說話方式一回合", engText: "Imitate right neighbor for 1 round", type: 'DARE', category: "mild" },
-  { id: 606, text: "用RAP的方式對左邊的人自我介紹", engText: "Self intro in RAP to left person", type: 'DARE', category: "wild" },
-  { id: 607, text: "聞自己的腳，然後說「真香」", engText: "Smell own foot and say Yummy", type: 'DARE', category: "wild" },
-  { id: 608, text: "假裝中彈身亡，倒在右邊的人身上", engText: "Act dying, fall on right person", type: 'DARE', category: "mild" },
-  { id: 609, text: "深蹲5下，每下都要對著正對面的人發出奇怪聲音", engText: "5 squats with weird noises at opposite person", type: 'DARE', category: "mild" },
-  { id: 610, text: "讓左邊的人用口紅/筆在你臉上畫一顆痣", engText: "Draw a mole on face", type: 'DARE', category: "wild" },
-  { id: 612, text: "對著Siri說「我好寂寞」並唸出Siri的回答", engText: "Tell Siri I'm lonely", type: 'DARE', category: "mild" },
   { id: 613, text: "對著大家擺一個時尚雜誌名模POSE堅持1分鐘", engText: "Vogue pose for 1 min", type: 'DARE', category: "mild" },
-  { id: 614, text: "把右邊的人的鞋子脫下來當電話打給前任(假裝)", engText: "Use right person's shoe as phone", type: 'DARE', category: "wild" },
-  { id: 616, text: "向左邊的陌生人推薦這個APP，並強迫他現場玩一次", engText: "Recommend this APP to a stranger on left", type: 'DARE', category: "wild" },
-
-  // King's Wild Actions (Targeted)
-  { id: 401, text: "你是國王！指定左手邊第一位當你的僕人，幫你拿酒/按摩一回合", engText: "King! Left #1 is your servant for 1 round", type: 'DARE', category: "mild" },
-  { id: 402, text: "你是國王！指定正對面與他右邊的人進行深情對視比賽，先笑的喝", engText: "King! Opposite & their neighbor staring contest", type: 'DARE', category: "wild" },
-  { id: 403, text: "你是國王！指定右手邊第二位模仿猴子，直到下一輪", engText: "King! Right #2 acts like a monkey", type: 'DARE', category: "mild" },
-  { id: 404, text: "你是國王！指定左邊第一位去搭訕路人/隔壁桌", engText: "King! Left #1 hits on a stranger", type: 'DARE', category: "wild" },
   
-  { id: 4051, text: "你是國王！指定左一和右一十指緊扣一回合", engText: "King! Left #1 & Right #1 hold hands 1 round", type: 'DARE', category: "wild" },
-  { id: 4052, text: "你是國王！指定現場兩位異性十指緊扣3分鐘", engText: "King! 2 opposite sex hold hands 3 mins", type: 'DARE', category: "wild" },
+  // [NEW] Phone & Digital Chaos (Modern Risks)
+  { id: 630, text: "打開Google搜尋紀錄，大聲唸出最近的三筆", engText: "Read out last 3 Google searches", type: 'DARE', category: "wild" },
+  { id: 631, text: "解鎖手機，讓右手邊的人隨機唸出一則LINE/IG訊息", engText: "Right person reads 1 random msg", type: 'DARE', category: "wild" },
+  { id: 632, text: "打開相簿，讓左邊的人快速滑動並隨機點開一張展示", engText: "Show a random photo from gallery", type: 'DARE', category: "wild" },
+  { id: 633, text: "讓大家看你的螢幕使用時間(看誰最成癮)", engText: "Show your Screen Time", type: 'DARE', category: "mild" },
+  
+  // [NEW] Roleplay & Acting (Funny)
+  { id: 640, text: "假裝你是直播帶貨主，用超誇張語氣推銷正對面的人", engText: "Sell the opposite person like a livestreamer", type: 'DARE', category: "wild" },
+  { id: 641, text: "假裝你是酒店公關，向左邊的人撒嬌推銷自己", engText: "Act like a host/hostess selling yourself to left person", type: 'DARE', category: "wild" },
+  { id: 642, text: "模仿在場其中一個人的招牌動作/口頭禪，讓大家猜", engText: "Imitate someone here, let others guess", type: 'DARE', category: "mild" },
+  { id: 643, text: "接下來一輪，每句話結尾都要加「喵」/「啾咪」", engText: "End every sentence with 'Meow' for 1 round", type: 'DARE', category: "mild" },
+  { id: 644, text: "用RAP的方式抱怨你的工作/學業", engText: "Rap about your job/study complaints", type: 'DARE', category: "wild" },
+  { id: 645, text: "把頭放在桌上，假裝你是盤子裡的菜，維持30秒", engText: "Put head on table, act like a dish for 30s", type: 'DARE', category: "mild" },
 
-  { id: 406, text: "你是國王！指定和你間隔最遠的三個人一起做深蹲5下", engText: "King! 3 furthest people do 5 squats", type: 'DARE', category: "wild" },
-  { id: 407, text: "你是國王！指定右手邊第一位異性坐在你旁邊(換位置)一回合", engText: "King! Right #1 opposite sex sits next to you 1 round", type: 'DARE', category: "wild" },
-  { id: 408, text: "你是國王！指定左一和右一互換外套穿，持續到遊戲結束", engText: "King! Left #1 & Right #1 swap jackets until end", type: 'DARE', category: "wild" },
-  { id: 409, text: "你是國王！指定正對面的人對著大家撒嬌", engText: "King! Opposite person acts cute", type: 'DARE', category: "wild" },
-  { id: 410, text: "你是國王！指定兩個人合唱一首歌", engText: "King! Assign 2 people to sing a duet", type: 'DARE', category: "wild" },
-  { id: 411, text: "你是國王！指定左邊第一位被你畫臉", engText: "King! Draw on Left #1's face", type: 'DARE', category: "wild" },
-  { id: 412, text: "你是國王！指定右手邊三個人疊在一起拍照", engText: "King! 3 people on right stack for a photo", type: 'DARE', category: "wild" },
-  { id: 413, text: "你是國王！指定正對面的人和你玩剪刀石頭布，輸的脫一件", engText: "King! RPS with opposite, loser removes item", type: 'DARE', category: "wild" },
-  { id: 414, text: "你是國王！指定左邊第一位做伏地挺身，上面坐右邊第一位", engText: "King! Left #1 pushups with Right #1 sitting on back", type: 'DARE', category: "wild" },
-
-  // Wild Actions (Specific Targets & Durations)
-  { id: 60, text: "跟右手邊第一位異性深情對視10秒", engText: "Stare at right opposite sex 10s", type: 'DARE', category: "wild" },
-  { id: 6011, text: "跟左手邊第一位異性深情對視20秒", engText: "Stare at left opposite sex 20s", type: 'DARE', category: "wild" },
-  { id: 6012, text: "跟正對面的人深情對視30秒", engText: "Stare at opposite person 30s", type: 'DARE', category: "wild" },
+  // ==========================================
+  // 4. FLIRTY & SENSUAL (Specific Targets & Durations)
+  // ==========================================
+  { id: 5301, text: "和右手邊第一位擁抱10秒", engText: "Hug right person for 10s", type: 'DARE', category: "mild" },
+  { id: 5302, text: "和左手邊第一位擁抱20秒", engText: "Hug left person for 20s", type: 'DARE', category: "mild" },
+  { id: 5601, text: "讓右手邊第一位幫你按摩肩膀1分鐘", engText: "Right #1 massages you 1 min", type: 'DARE', category: "mild" },
+  { id: 5602, text: "讓左手邊第一位幫你按摩肩膀30秒", engText: "Left #1 massages you 30s", type: 'DARE', category: "mild" },
+  
+  { id: 60, text: "跟右手邊第一位異性深情對視10秒 (不能笑)", engText: "Stare at Right #1 opposite sex 10s (No laughing)", type: 'DARE', category: "wild" },
+  { id: 601, text: "跟左手邊第一位異性深情對視20秒 (不能笑)", engText: "Stare at Left #1 opposite sex 20s (No laughing)", type: 'DARE', category: "wild" },
+  
+  { id: 6041, text: "對著正對面的人深情告白30秒 (越肉麻越好)", engText: "Confess love to opposite person 30s", type: 'DARE', category: "wild" },
+  { id: 6042, text: "對著左手邊第一位異性單膝下跪求婚(假裝)", engText: "Fake propose to Left #1 opposite sex", type: 'DARE', category: "wild" },
   
   { id: 61, text: "對著正對面的人跳一段性感的舞20秒", engText: "Sexy dance for opposite person 20s", type: 'DARE', category: "wild" },
+  { id: 65, text: "對著右邊的人用嫵媚的聲音說：我好熱", engText: "Seductively say 'I'm so hot' to right person", type: 'DARE', category: "wild" },
   
-  { id: 63, text: "聞右邊的人的腋下", engText: "Smell right person's armpit", type: 'DARE', category: "wild" },
-  { id: 6301, text: "聞左邊的人的腋下", engText: "Smell left person's armpit", type: 'DARE', category: "wild" },
-  
-  { id: 65, text: "對著右邊的人用嫵媚的聲音說：我要", engText: "Seductively say 'I want it' to right person", type: 'DARE', category: "wild" },
-  { id: 6501, text: "對著左邊的人用嫵媚的聲音說：好熱", engText: "Seductively say 'So hot' to left person", type: 'DARE', category: "wild" },
-  
-  { id: 66, text: "讓右手邊第一位檢查你的包包/口袋", engText: "Right #1 checks your bag/pocket", type: 'DARE', category: "wild" },
-  
-  { id: 67, text: "對這杯酒深情告白然後喝掉", engText: "Confess to drink then drink", type: 'DARE', category: "wild" },
-  { id: 68, text: "用舌頭舔一下杯緣一圈", engText: "Lick glass rim", type: 'DARE', category: "wild" },
-  { id: 69, text: "說出初吻的年齡", engText: "Age of first kiss", type: 'DARE', category: "wild" },
-  
-  { id: 70, text: "對著左邊的人發出性感的呻吟聲", engText: "Sexy moan to left person", type: 'DARE', category: "wild" },
-  { id: 7001, text: "對著右邊的人發出性感的呻吟聲", engText: "Sexy moan to right person", type: 'DARE', category: "wild" },
-  
-  { id: 71, text: "說出在場最有好感的人", engText: "Who do you like here", type: 'DARE', category: "wild" },
-  
-  { id: 72, text: "脫掉身上的一件配件或外衣", engText: "Remove item", type: 'DARE', category: "wild" },
-  
-  { id: 73, text: "用公主抱抱起右手邊第一位異性深蹲三下", engText: "Bridal carry right opposite sex & squat 3 times", type: 'DARE', category: "wild" },
-  { id: 7301, text: "用公主抱抱起左手邊第一位異性深蹲一下", engText: "Bridal carry left opposite sex & squat once", type: 'DARE', category: "wild" },
-  
-  { id: 74, text: "讓左邊的人聞你的頭髮", engText: "Left person smell hair", type: 'DARE', category: "wild" },
-  
-  { id: 75, text: "和右邊的人臉貼臉堅持10秒", engText: "Cheek to cheek with right person 10s", type: 'DARE', category: "wild" },
-  { id: 7501, text: "和左邊的人臉貼臉堅持10秒", engText: "Cheek to cheek with left person 10s", type: 'DARE', category: "wild" },
-  { id: 7502, text: "和正對面的人臉貼臉堅持20秒", engText: "Cheek to cheek with opposite person 20s", type: 'DARE', category: "wild" },
+  // [NEW] Physical Escalation (Safe but Hot)
+  { id: 701, text: "用手指幫右手邊的人梳頭/整理瀏海", engText: "Fix Right #1's hair with fingers", type: 'DARE', category: "wild" },
+  { id: 702, text: "抓著左邊的人的手，放在自己心臟位置說「你有感覺到嗎」", engText: "Put left person's hand on your heart", type: 'DARE', category: "wild" },
+  { id: 703, text: "讓右手邊的人用手指抹掉你嘴唇上的酒漬", engText: "Right person wipes drink off your lips", type: 'DARE', category: "wild" },
+  { id: 704, text: "讓左手邊的人聞你脖子的味道，並評價像什麼", engText: "Let left person smell your neck & rate it", type: 'DARE', category: "wild" },
+  { id: 705, text: "找一位異性共用一根吸管喝一口酒 (眼神要對視)", engText: "Share a straw with opposite sex & stare", type: 'DARE', category: "wild" },
+  { id: 706, text: "和右手邊第一位異性十指緊扣，講出他/她的三個優點", engText: "Hold hands with Right #1 opposite sex & say 3 good traits", type: 'DARE', category: "wild" },
+  { id: 707, text: "咬住下嘴唇，用一種「要把你吃掉」的眼神看著正對面的人", engText: "Bite lip and stare hungrily at opposite person", type: 'DARE', category: "wild" },
+  { id: 708, text: "用你的臉頰去蹭左邊的人的臉頰，持續5秒", engText: "Rub your cheek against left person's cheek 5s", type: 'DARE', category: "wild" },
   
   { id: 76, text: "被左邊的人壁咚10秒", engText: "Kabedon by left person 10s", type: 'DARE', category: "wild" },
-  { id: 7601, text: "被右邊的人壁咚10秒", engText: "Kabedon by right person 10s", type: 'DARE', category: "wild" },
-  { id: 7602, text: "壁咚正對面的人20秒", engText: "Kabedon opposite person 20s", type: 'DARE', category: "wild" },
-  
-  { id: 77, text: "讓右邊的人幫你塗護唇膏(用手指)", engText: "Right person puts lip balm on you (finger)", type: 'DARE', category: "wild" },
-  
-  { id: 78, text: "從後面環抱左邊的人10秒", engText: "Back hug left person 10s", type: 'DARE', category: "wild" },
-  { id: 7801, text: "從後面環抱右邊的人10秒", engText: "Back hug right person 10s", type: 'DARE', category: "wild" },
-  { id: 7802, text: "從後面環抱正對面的人30秒", engText: "Back hug opposite person 30s", type: 'DARE', category: "wild" },
-  
-  { id: 79, text: "親吻右邊的人的手背", engText: "Kiss right person's hand", type: 'DARE', category: "wild" },
-  { id: 7901, text: "親吻左邊的人的手背", engText: "Kiss left person's hand", type: 'DARE', category: "wild" },
+  { id: 761, text: "被右邊的人壁咚10秒", engText: "Kabedon by right person 10s", type: 'DARE', category: "wild" },
+  { id: 762, text: "壁咚正對面的人20秒", engText: "Kabedon opposite person 20s", type: 'DARE', category: "wild" },
 
-  // --- 4. 18+ Explicit (Targeted & Duration Variations) ---
-  
+  { id: 78, text: "從後面環抱左邊的人10秒", engText: "Back hug left person 10s", type: 'DARE', category: "wild" },
+  { id: 79, text: "親吻右邊的人的手背", engText: "Kiss right person's hand", type: 'DARE', category: "wild" },
+
+  // ==========================================
+  // 5. 18+ EXPLICIT (Evil Mode Only - The Danger Zone)
+  // ==========================================
   { id: 201, text: "嘴對嘴傳冰塊給右手邊第一位", engText: "Pass ice mouth-to-mouth to Right #1", type: 'DARE', category: "r18" },
   { id: 2011, text: "嘴對嘴傳冰塊給左手邊第一位", engText: "Pass ice mouth-to-mouth to Left #1", type: 'DARE', category: "r18" },
-  { id: 2012, text: "嘴對嘴傳冰塊給正對面的人", engText: "Pass ice mouth-to-mouth to Opposite", type: 'DARE', category: "r18" },
-
-  { id: 202, text: "用嘴巴解開左手邊第一位異性的上衣扣子", engText: "Mouth unbutton Left #1 opposite sex's shirt", type: 'DARE', category: "r18" },
-  { id: 2021, text: "用嘴巴解開右手邊第一位異性的褲頭/裙頭扣子", engText: "Mouth unbutton Right #1 opposite sex's pants", type: 'DARE', category: "r18" },
-
+  
+  { id: 202, text: "用嘴巴解開左手邊第一位異性的上衣扣子/拉鍊", engText: "Mouth unbutton Left #1's shirt/zipper", type: 'DARE', category: "r18" },
+  
   // Sitting on Laps (Time Variations)
   { id: 2030, text: "坐在右手邊第一位異性的大腿上，持續一回合", engText: "Sit on Right #1 opposite sex's lap for 1 round", type: 'DARE', category: "r18" },
   { id: 2031, text: "坐在左手邊第一位異性的大腿上，持續3分鐘", engText: "Sit on Left #1 opposite sex's lap for 3 mins", type: 'DARE', category: "r18" },
-  { id: 2032, text: "坐在右手邊第二位異性的大腿上，持續一回合", engText: "Sit on Right #2 opposite sex's lap for 1 round", type: 'DARE', category: "r18" },
-  { id: 2033, text: "坐在正對面異性的大腿上，直到有人喝完下一杯酒", engText: "Sit on Opposite sex's lap until next drink finished", type: 'DARE', category: "r18" },
-  { id: 2034, text: "讓左手邊第一位異性坐在你大腿上，持續10分鐘", engText: "Left #1 opposite sex sits on your lap for 10 mins", type: 'DARE', category: "r18" },
-
+  { id: 2032, text: "坐在正對面異性的大腿上，直到有人喝完下一杯酒", engText: "Sit on Opposite sex's lap until next drink", type: 'DARE', category: "r18" },
+  
   { id: 204, text: "對右邊的人耳朵吹氣5秒", engText: "Blow in right person's ear 5s", type: 'DARE', category: "r18" },
-  { id: 2041, text: "對左邊的人耳朵吹氣10秒", engText: "Blow in left person's ear 10s", type: 'DARE', category: "r18" },
-
   { id: 205, text: "用嘴含冰塊在左邊的人脖子上滑動", engText: "Ice on left person's neck", type: 'DARE', category: "r18" },
-  { id: 2051, text: "用嘴含冰塊在右邊的人脖子上滑動", engText: "Ice on right person's neck", type: 'DARE', category: "r18" },
-  { id: 2052, text: "用嘴含冰塊在正對面的人鎖骨上滑動", engText: "Ice on opposite person's collarbone", type: 'DARE', category: "r18" },
-
-  { id: 206, text: "讓左邊第一位異性摸你的腹肌/鎖骨", engText: "Left #1 opposite sex touches abs/collarbone", type: 'DARE', category: "r18" },
-  { id: 2061, text: "讓右邊第一位異性摸你的大腿/腰", engText: "Right #1 opposite sex touches thigh/waist", type: 'DARE', category: "r18" },
-
-  { id: 207, text: "讓右邊的人手伸進你衣服裡摸肚子10秒", engText: "Right person hand inside shirt touching belly 10s", type: 'DARE', category: "r18" },
-  { id: 2071, text: "讓左邊的人手伸進你衣服裡摸背10秒", engText: "Left person hand inside shirt touching back 10s", type: 'DARE', category: "r18" },
-
-  { id: 208, text: "輕咬左邊的人的耳朵", engText: "Bite left person's ear", type: 'DARE', category: "r18" },
-  { id: 2081, text: "輕咬右邊的人的耳朵", engText: "Bite right person's ear", type: 'DARE', category: "r18" },
-
+  
+  { id: 206, text: "讓左邊第一位異性摸你的腹肌/鎖骨/大腿", engText: "Left #1 touches abs/collarbone/thigh", type: 'DARE', category: "r18" },
+  { id: 207, text: "讓右邊的人手伸進你衣服裡摸肚子/背10秒", engText: "Right person hand inside shirt touching skin 10s", type: 'DARE', category: "r18" },
+  
+  { id: 208, text: "輕咬左邊的人的耳朵/耳垂", engText: "Bite left person's ear/earlobe", type: 'DARE', category: "r18" },
   { id: 209, text: "用身體磨蹭左手邊異性10秒", engText: "Grind body on left opposite sex 10s", type: 'DARE', category: "r18" },
-  { id: 2091, text: "用身體磨蹭右手邊異性20秒", engText: "Grind body on right opposite sex 20s", type: 'DARE', category: "r18" },
-  { id: 2092, text: "用身體磨蹭正對面的人10秒", engText: "Grind body on opposite person 10s", type: 'DARE', category: "r18" },
-
+  
   { id: 210, text: "在右邊的人大腿內側用手指寫字", engText: "Finger write on right person's inner thigh", type: 'DARE', category: "r18" },
-  { id: 2101, text: "在左邊的人大腿內側用手指寫字", engText: "Finger write on left person's inner thigh", type: 'DARE', category: "r18" },
-
+  { id: 2120, text: "種草莓在右邊的人脖子上 (或親吻脖子10秒)", engText: "Hickey/Kiss on Right person's neck", type: 'DARE', category: "r18" },
+  
   // Swap Shirts (Time Variations)
   { id: 2110, text: "跟右手邊第一位異性互換上衣，持續一回合", engText: "Swap shirts with Right #1 opposite sex for 1 round", type: 'DARE', category: "r18" },
   { id: 2111, text: "跟左手邊第一位異性互換上衣，持續10分鐘", engText: "Swap shirts with Left #1 opposite sex for 10 mins", type: 'DARE', category: "r18" },
   { id: 2112, text: "跟正對面的異性互換上衣，直到遊戲結束", engText: "Swap shirts with opposite person until game ends", type: 'DARE', category: "r18" },
-  { id: 2113, text: "跟右手邊第二位異性互換上衣，持續3分鐘", engText: "Swap shirts with Right #2 opposite sex for 3 mins", type: 'DARE', category: "r18" },
 
-  { id: 2120, text: "種草莓在右邊的人脖子上 (或親吻脖子10秒)", engText: "Hickey/Kiss on Right person's neck", type: 'DARE', category: "r18" },
-  { id: 2121, text: "種草莓在左邊的人鎖骨上 (或親吻鎖骨10秒)", engText: "Hickey/Kiss on Left person's collarbone", type: 'DARE', category: "r18" }
+  // [NEW] R18 Escalated (Sensory & Hot)
+  { id: 2201, text: "蒙上眼睛，讓左邊的人隨機親你臉的一個部位", engText: "Blindfold, left person kisses face randomly", type: 'DARE', category: "r18" },
+  { id: 2202, text: "用嘴巴餵右手邊的人吃東西 (或冰塊/檸檬片)", engText: "Mouth feed right person", type: 'DARE', category: "r18" },
+  { id: 2203, text: "讓正對面的人用手指輕輕劃過你的脊椎", engText: "Opposite person traces your spine", type: 'DARE', category: "r18" },
+  { id: 2204, text: "把手放在左邊異性的胸口(心臟處)感受心跳20秒", engText: "Hand on left opposite sex's chest for 20s", type: 'DARE', category: "r18" },
+  { id: 2205, text: "在右邊的人耳邊用氣音說一句你覺得最色情的話", engText: "Whisper something dirty to right person", type: 'DARE', category: "r18" },
+  { id: 2206, text: "脫掉襪子，用腳去磨蹭正對面的人的小腿", engText: "Rub opposite person's calf with bare foot", type: 'DARE', category: "r18" },
+  { id: 2207, text: "讓左邊的人在你的鎖骨倒一點酒，並吸乾淨", engText: "Drink shot off collarbone", type: 'DARE', category: "r18" },
+  { id: 2208, text: "輕輕拉扯右邊的人的衣服/領帶，把他拉向自己", engText: "Pull right person close by their clothes", type: 'DARE', category: "r18" }
 ];
 
 export const TRUTHS: GameContent[] = [
+    // Mild / Fun
     { id: 1001, text: "你現在有喜歡的人嗎？", engText: "Do you have a crush right now?", type: 'TRUTH', category: "mild" },
     { id: 1002, text: "初吻是在什麼時候？", engText: "When was your first kiss?", type: 'TRUTH', category: "mild" },
-    { id: 1003, text: "說出在場一位異性的優點", engText: "Name a good trait of someone opposite sex here", type: 'TRUTH', category: "mild" },
+    { id: 1003, text: "說出在場一位異性的三個優點", engText: "Name 3 good traits of someone opposite sex here", type: 'TRUTH', category: "mild" },
+    { id: 1009, text: "上一次哭是因為什麼？", engText: "Why did you cry last time?", type: 'TRUTH', category: "mild" },
+    { id: 1010, text: "手機裡最後一張照片是什麼？(拿出來看)", engText: "Show the last photo in your phone", type: 'TRUTH', category: "mild" },
+    { id: 1012, text: "說出你做過最丟臉的一件事", engText: "Most embarrassing moment?", type: 'TRUTH', category: "mild" },
+    
+    // Wild / Deep
     { id: 1004, text: "你覺得在場誰最性感？", engText: "Who is the sexiest person here?", type: 'TRUTH', category: "wild" },
-    { id: 1005, text: "最後一次性幻想對象是誰？", engText: "Who was your last sexual fantasy about?", type: 'TRUTH', category: "r18" },
     { id: 1006, text: "曾經對朋友的另一半動心過嗎？", engText: "Ever had feelings for a friend's partner?", type: 'TRUTH', category: "wild" },
     { id: 1007, text: "能夠接受一夜情嗎？", engText: "Can you accept one night stands?", type: 'TRUTH', category: "wild" },
-    { id: 1008, text: "最喜歡的體位是什麼？", engText: "Favorite position?", type: 'TRUTH', category: "r18" },
-    { id: 1009, text: "上一次哭是因為什麼？", engText: "Why did you cry last time?", type: 'TRUTH', category: "mild" },
-    { id: 1010, text: "手機裡最後一張照片是什麼？", engText: "What is the last photo in your phone?", type: 'TRUTH', category: "mild" }
+    { id: 1011, text: "如果必須跟在場的一個人交往，你會選誰？", engText: "Who here would you date?", type: 'TRUTH', category: "wild" },
+    { id: 1013, text: "最近一次說謊是什麼時候？對誰？", engText: "When was the last time you lied?", type: 'TRUTH', category: "wild" },
+    { id: 1014, text: "曾經偷看過另一半的手機嗎？", engText: "Checked partner's phone secretly?", type: 'TRUTH', category: "wild" },
+    { id: 1015, text: "這輩子做過最後悔的一件事？", engText: "Biggest regret in life?", type: 'TRUTH', category: "wild" },
+
+    // R18 / Spicy
+    { id: 1005, text: "最後一次性幻想對象是誰？", engText: "Who was your last sexual fantasy about?", type: 'TRUTH', category: "r18" },
+    { id: 1008, text: "最喜歡的愛愛姿勢是什麼？", engText: "Favorite position?", type: 'TRUTH', category: "r18" },
+    { id: 1016, text: "最近一次DIY是什麼時候？", engText: "Last time you masturbated?", type: 'TRUTH', category: "r18" },
+    { id: 1017, text: "有沒有在公共場所做過壞壞的事？", engText: "Had sex in public?", type: 'TRUTH', category: "r18" },
+    { id: 1018, text: "覺得自己的性能力幾分 (1-10)？", engText: "Rate your sex skills (1-10)", type: 'TRUTH', category: "r18" },
+    { id: 1019, text: "看過最奇怪的A片類型是什麼？", engText: "Weirdest porn category watched?", type: 'TRUTH', category: "r18" },
+    { id: 1020, text: "身上哪裡是絕對不能被碰的敏感帶？", engText: "Where is your 'no touch' zone?", type: 'TRUTH', category: "r18" },
+    { id: 1021, text: "喜歡開燈做還是關燈做？", engText: "Lights on or off?", type: 'TRUTH', category: "r18" }
 ];
 
 export const SOLO_CONTENT: GameContent[] = [
-    // Existing Drinking
+    // Drinking
     { id: 9001, text: "喝一杯", engText: "Drink one cup", type: 'DARE', category: "drinking" },
     { id: 9002, text: "喝半杯", engText: "Drink half cup", type: 'DARE', category: "drinking" },
-    { id: 9003, text: "休息一回", engText: "Rest one round", type: 'DARE', category: "mild" },
     
-    // Social / Stranger Interaction
+    // Main Character Energy (Cool & Funny)
     { id: 9004, text: "找一個陌生人借火(或問時間)，並稱讚他/她", engText: "Ask stranger for fire/time & compliment them", type: 'DARE', category: "wild" },
     { id: 9005, text: "去隔壁桌舉杯敬酒，說聲「辛苦了」", engText: "Cheers with a nearby table", type: 'DARE', category: "wild" },
-    { id: 9006, text: "找店員合照一張", engText: "Selfie with the bartender/staff", type: 'DARE', category: "wild" },
-    { id: 9007, text: "跟陌生人玩一次剪刀石頭布，贏了才能回來", engText: "Win RPS against a stranger", type: 'DARE', category: "wild" },
-    { id: 9008, text: "問一個路人「現在是民國幾年？」並裝作很驚訝", engText: "Ask stranger the year & look shocked", type: 'DARE', category: "wild" },
-    { id: 9025, text: "向陌生人推薦這個 APP，並強迫他現場玩一次", engText: "Recommend this APP to a stranger & make them play once", type: 'DARE', category: "wild" },
+    { id: 9006, text: "找店員合照一張，說他是你偶像", engText: "Selfie with the bartender, call them idol", type: 'DARE', category: "wild" },
+    { id: 9026, text: "假裝你是外國人，用英文跟店員點一杯水", engText: "Order water in English with fake accent", type: 'DARE', category: "wild" },
+    { id: 9027, text: "問隔壁桌的人覺得你今天穿得好看嗎", engText: "Ask neighbors if your outfit is nice", type: 'DARE', category: "wild" },
 
     // Social Media / Phone
     { id: 9010, text: "拍一杯酒發IG限動，打上「今晚嫁給它」", engText: "IG Story: 'Marrying this drink tonight'", type: 'DARE', category: "wild" },
-    { id: 9011, text: "發一則全黑限動，小字打「...」", engText: "Post black IG story with '...'", type: 'DARE', category: "wild" },
     { id: 9012, text: "隨機打給一個朋友，接通後唱兩句生日快樂歌再掛掉", engText: "Call friend, sing HBD, hang up", type: 'DARE', category: "wild" },
     { id: 9013, text: "開直播1分鐘，甚麼都不說只喝酒", engText: "Live stream 1 min silently drinking", type: 'DARE', category: "wild" },
-    { id: 9014, text: "發一個投票問大家「我看起來醉了嗎？」", engText: "IG Poll: 'Do I look drunk?'", type: 'DARE', category: "mild" },
+    { id: 9028, text: "發一則限動問「我在哪裡？猜對匯款500」", engText: "IG Story: 'Where am I? Guess for cash'", type: 'DARE', category: "mild" },
 
-    // Self-Entertainment / Absurd
+    // Self-Entertainment
     { id: 9020, text: "去廁所對著鏡子裡的自己猜拳，直到贏為止", engText: "RPS with yourself in mirror until you win", type: 'DARE', category: "wild" },
     { id: 9021, text: "假裝自己在講電話，大聲說「幾千萬的案子我不在乎啦！」", engText: "Fake call: 'I don't care about the millions!'", type: 'DARE', category: "wild" },
-    { id: 9022, text: "對著空氣乾杯，說「敬 孤獨」", engText: "Cheers to the air: 'To loneliness'", type: 'DARE', category: "mild" },
     { id: 9023, text: "模仿店裡放的音樂跳舞30秒", engText: "Dance to bgm for 30s", type: 'DARE', category: "wild" },
-    { id: 9024, text: "深情看著自己的手掌心10秒", engText: "Stare at your palm deeply 10s", type: 'DARE', category: "mild" },
+    { id: 9029, text: "打開前鏡頭，深情看著自己說「你這該死的小妖精」", engText: "Tell yourself 'You damn sexy thing'", type: 'DARE', category: "wild" }
 ];
 
-// --- Specialized 2-Player Content (1v1) ---
+// --- Specialized 2-Player Content (1v1 Chemistry Test) ---
 export const TWO_PLAYER_CONTENT: GameContent[] = [
-    // Social / Drinking Dares
+    // Social / Drinking
     { id: 8001, text: "喝一杯", engText: "Drink one full cup", type: 'DARE', category: "drinking" },
     { id: 8002, text: "指定對方喝半杯", engText: "Assign the other person to drink half a cup", type: 'DARE', category: "drinking" },
-    { id: 8003, text: "去跟一位陌生人敬酒", engText: "Go cheers with a stranger", type: 'DARE', category: "wild" },
     { id: 8004, text: "拍一張兩人合照，上傳到你的限時動態", engText: "Post a selfie of you two on IG story", type: 'DARE', category: "wild" },
-    { id: 8005, text: "自拍一張超醜的照片，上傳到IG限動", type: 'DARE', category: "wild" },
-    { id: 8006, text: "上傳一則文不對題的限時動態 (例如拍地板說好飽)", type: 'DARE', category: "wild" },
     { id: 8007, text: "錄一段正在玩這個APP的影片發IG", type: 'DARE', category: "wild" },
-    { id: 8008, text: "向陌生人推薦這個 APP，並強迫他現場玩一次", engText: "Recommend this APP to a stranger & make them play once", type: 'DARE', category: "wild" },
+    
+    // Bonding / Chemistry
+    { id: 8040, text: "互看對方眼睛30秒，誰先笑誰喝", engText: "Staring contest 30s, loser drinks", type: 'DARE', category: "wild" },
+    { id: 8041, text: "用一分鐘幫對方畫一張似顏繪(用紙或手機)", engText: "Draw each other in 1 min", type: 'DARE', category: "mild" },
+    { id: 8042, text: "同時回答：最喜歡的食物？不一樣就喝", engText: "Sync Answer: Fav food? Mismatch drinks", type: 'DARE', category: "mild" },
+    { id: 8043, text: "讓對方檢查你的 Youtube 觀看紀錄", engText: "Let them check YouTube history", type: 'DARE', category: "wild" },
 
-    // Bonding Truths (Mild/Deep)
+    // Truths (Deep)
     { id: 8010, text: "第一次見到對方的印象是什麼？", engText: "First impression of each other?", type: 'TRUTH', category: "mild" },
     { id: 8011, text: "覺得對方身上最迷人的部位是？", engText: "Most attractive part of them?", type: 'TRUTH', category: "mild" },
-    { id: 8012, text: "如果要跟對方去一個地方旅行，會選哪裡？", engText: "Where would you travel with them?", type: 'TRUTH', category: "mild" },
-    { id: 8013, text: "最近一次哭是因為什麼事情？", engText: "Why did you last cry?", type: 'TRUTH', category: "mild" },
     { id: 8014, text: "分享一個從來沒跟別人說過的秘密", engText: "Share a secret you've never told anyone", type: 'TRUTH', category: "wild" },
-    { id: 8015, text: "你覺得我們兩個之間最像的地方是？", engText: "How are we most alike?", type: 'TRUTH', category: "mild" },
+    { id: 8044, text: "你覺得我們兩個有可能發展嗎？", engText: "Do you think we have a chance?", type: 'TRUTH', category: "wild" },
 
-    // 18+ Physical Dares (Touch)
+    // 18+ Touch (High Tension)
     { id: 8020, text: "深情親吻對方的脖子5秒", engText: "Kiss their neck for 5s", type: 'DARE', category: "r18" },
-    { id: 8021, text: "用手指輕劃對方的嘴唇", engText: "Trace their lips with finger", type: 'DARE', category: "r18" },
     { id: 8022, text: "讓對方坐在你大腿上1分鐘", engText: "Sit on lap for 1 min", type: 'DARE', category: "r18" },
     { id: 8023, text: "把手伸進對方衣服裡摸背/腰", engText: "Touch back/waist under shirt", type: 'DARE', category: "r18" },
-    { id: 8024, text: "在對方耳邊發出性感的呻吟聲", engText: "Moan sexily in their ear", type: 'DARE', category: "r18" },
-    { id: 8025, text: "用舌頭舔一下對方的耳垂", engText: "Lick their earlobe", type: 'DARE', category: "r18" },
+    { id: 8045, text: "用嘴巴解開對方一個扣子或拉鍊", engText: "Undo a button/zipper with mouth", type: 'DARE', category: "r18" },
+    { id: 8046, text: "蒙上對方的眼睛，用手觸碰他/她三個部位猜", engText: "Blindfold touch & guess", type: 'DARE', category: "r18" },
+    { id: 8048, text: "用嘴巴餵對方吃冰塊", engText: "Feed ice with mouth", type: 'DARE', category: "r18" },
 
-    // 18+ Sexual Truths
+    // 18+ Truths
     { id: 8030, text: "你最喜歡的愛愛體位是什麼？", engText: "Favorite position?", type: 'TRUTH', category: "r18" },
     { id: 8031, text: "曾經對在場的人(對方)有過性幻想嗎？", engText: "Ever had a fantasy about the other person?", type: 'TRUTH', category: "r18" },
-    { id: 8032, text: "身上哪個部位最敏感？", engText: "Most sensitive body part?", type: 'TRUTH', category: "r18" },
-    { id: 8033, text: "描述一次你最難忘的性經驗", engText: "Describe your most memorable sex experience", type: 'TRUTH', category: "r18" },
-    { id: 8034, text: "喜歡開燈做還是關燈做？", engText: "Lights on or off?", type: 'TRUTH', category: "r18" }
+    { id: 8047, text: "現在有沒有想色色的事？", engText: "Thinking about naughty things now?", type: 'TRUTH', category: "r18" }
 ];
 
 export const COCKTAILS: Cocktail[] = [
@@ -406,7 +371,7 @@ export const GAMES: GameRule[] = [
       '如果沒人對到眼，安全',
       '如果大家都低頭沒抬起來，全部罰喝'
     ],
-    minPlayers: 3, // Removed for 2P
+    minPlayers: 3,
     icon: 'UserCheck'
   },
   {
@@ -420,7 +385,7 @@ export const GAMES: GameRule[] = [
       '例如: 出石頭的找石頭的抱在一起',
       '最後落單沒有配對成功的人喝'
     ],
-    minPlayers: 4, // Removed for 2P
+    minPlayers: 4,
     icon: 'Users'
   },
   {
@@ -434,7 +399,7 @@ export const GAMES: GameRule[] = [
       '或者: 遇到7的倍數或含7的數字不能唸，要拍手，錯了喝',
       '喊完如果沒人重複或出錯，找路人喝(誤)'
     ],
-    minPlayers: 3, // Removed for 2P
+    minPlayers: 3,
     icon: 'Hash'
   },
   {
@@ -448,7 +413,7 @@ export const GAMES: GameRule[] = [
       '如果某人同時被兩個人指到，那個人就要喝',
       '如果沒有人重複被指，就繼續下一輪'
     ],
-    minPlayers: 6, // Removed for 2P
+    minPlayers: 6,
     icon: 'Navigation'
   },
   {
